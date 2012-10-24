@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BBC7805-386F-4277-B757-B851FCFC65F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PublishThrottling</RootNamespace>
+    <AssemblyName>PublishThrottling</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Program Files %28x86%29\Windows Live\Writer\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>.\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="JoeBlogs">
+      <HintPath>.\JoeBlogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsLive.Client">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Api">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.ApplicationFramework, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.ApplicationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.BlogClient">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.BlogClient.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.BrowserControl, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.BrowserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Controls, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.CoreServices, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.CoreServices.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Extensibility">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.FileDestinations">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.FileDestinations.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.HtmlEditor">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.HtmlEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.HtmlParser, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.HtmlParser.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Instrumentation, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Interop, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Interop.Mshtml, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Interop.Mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Localization, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Mshtml, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.Passport, Version=16.4.3503.728, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.Passport.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.PostEditor">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.PostEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLive.Writer.SpellChecker">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLive.Writer.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsLiveLocal.WriterPlugin">
+      <HintPath>..\..\..\..\Program Files (x86)\Windows Live\Writer\WindowsLiveLocal.WriterPlugin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WindowsLiveWriterApplicationLib">
+      <Guid>{CF82D4DF-707C-4EA0-9C4C-A0FC928CF07E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Throttle.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
